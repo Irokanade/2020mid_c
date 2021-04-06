@@ -38,6 +38,8 @@ int main() {
     sBmpHeader header1;
     sBmpHeader header2;
 
+    printf("sizeof: %ld\n", sizeof(twoByteColor));
+
     printf("Please enter the image input name: ");
     fgets(fileName, 129, stdin);
     if(fileName[strlen(fileName) - 1] == '\n') {
@@ -87,7 +89,7 @@ int main() {
         fwrite(&newColor, 2, 1, pFile2);
     }
 
-    printf("Done!\n")
+    printf("Done!\n");
 
     fclose(pFile);
     fclose(pFile2);
